@@ -5,7 +5,7 @@ const Home = () => {
         <div className="intro">
             <h1>
             Hi!{" "}
-            <ReactTyped strings={["I am Damiya Gondha<br/><span class='subtitle'>Learner. Explorer. Professional overthinker.<br/>Computer science is an ocean I dive too deep into!</span>"]} typeSpeed={90}/>
+            <ReactTyped strings={["I am Damiya Gondha<br/><span class='subtitle'><i>Learner. Explorer. Professional overthinker.</i><br/>Computer science is an ocean I dive deep into!</span>"]} typeSpeed={90}/>
             </h1>
         </div>
     );

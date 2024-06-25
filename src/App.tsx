@@ -5,12 +5,14 @@ import About from './components/About'
 import Projects from './components/Projects'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
+import ParticlesBackground from './components/ParticlesBackground'
 
 function App() {
 
   return (
     <div className='App'>
       <div className='main'>
+        <ParticlesBackground />
         <Router>
          <Navbar/>
          <Routes>
