@@ -5,14 +5,14 @@ import About from './components/About'
 import Projects from './components/Projects'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
-import ParticlesBackground from './components/ParticlesBackground'
+import ScrollToHashElement from "@cascadia-code/scroll-to-hash-element";
 
 function App() {
 
   return (
     <div className='App'>
       <div className='main'>
-        <ParticlesBackground />
+      <ScrollToHashElement behavior="smooth" />
         <Router>
          <Navbar/>
          <Routes>
