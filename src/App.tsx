@@ -5,15 +5,13 @@ import About from './components/About'
 import Projects from './components/Projects'
 import Footer from './components/Footer'
 import Navbar from './components/Navbar'
-import ScrollToHashElement from "@cascadia-code/scroll-to-hash-element";
 
 function App() {
 
   return (
     <div className='App'>
       <div className='main'>
-      <ScrollToHashElement behavior="smooth" />
-        <Router>
+        <Router basename='/my_website/'>
          <Navbar/>
          <Routes>
           <Route path="/" element={<Home/>}/>
