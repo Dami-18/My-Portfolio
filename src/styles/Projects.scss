@@ -1,0 +1,53 @@
+.project {
+    width: 80vw;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+
+  .fa-github{
+    font-size: 1.67rem;
+  }
+  
+  .project .box-1, .project .box-2 {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  
+  .project .proj-1, .project .proj-2, .project .projtxt, .project .tech-stack {
+    font-size: 1.45rem;
+    text-align: center;
+  }
+  
+  @media screen and (max-width: 500px) {
+    .project .box {
+      padding: 5px;
+    }
+    .project .proj-1, .project .proj-2, .project .projtxt, .project .tech-stack {
+        font-size: 0.8rem;
+    }
+    .fa-github{
+        font-size: 1.2rem;
+      }
+  }
+
+  @media screen and (min-width: 501px) and (max-width: 900px){
+    .project .box {
+        padding: 8px;
+      }
+      .project .proj-1, .project .proj-2, .project .projtxt, .project .tech-stack {
+        font-size: 1.2rem;
+    }
+  }
+  
+  @media screen and (min-width: 901px) and (max-width: 1300px){
+    .project .proj-1, .project .proj-2, .project .projtxt, .project .tech-stack {
+        font-size: 1.3rem;
+    }
+  }

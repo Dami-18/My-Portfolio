@@ -75,12 +75,16 @@ h1 {
   }
 }
 
+p{
+  font-family: $code-font;
+}
+
 .navbar{
   display: flex;
   column-gap: 3.5rem;
   justify-content: center;
   position: fixed;
-  top: 6px;
+  top: 10px;
   left: 0;
   width: 100%;
   div p{
@@ -97,6 +101,11 @@ h1 {
   row-gap: 12px;
   position: relative;
   top: 7rem;
+
+  .reachme{
+    font-family: $fancy-font;
+    font-size: 1.1rem;
+    }
   
   .icons{
     display: flex;
@@ -116,11 +125,6 @@ h1 {
     }
   }
 }
-
-.reachme{
-  font-family: $fancy-font;
-  font-size: 1.1rem;
-  }
 
 @keyframes blink {
     0% { text-shadow: 0 0 8px $lavender }
@@ -143,6 +147,7 @@ h1, .reachme {
 }
 
 .about{
+  width: 75vw;
   display: flex;
   .img-container{
     align-content: center;
@@ -151,7 +156,6 @@ h1, .reachme {
       box-shadow: 0 5px 8px rgb(0, 0, 0), 0 6px 20px rgb(0, 0, 0);
     }
   }
-
   text-align: left;
   .about-text{
     align-content: center;
@@ -161,30 +165,195 @@ h1, .reachme {
       font-size: 1.35rem;
       font-weight: 300;
       margin-top: 0;
-      float: left;
     }
   }
 }
 
-
-@media screen and (max-width: 1399px){
-  #about-me{
-    font-size: 1.2rem;
+@media screen and (max-width: 500px){
+  h1 {
+    font-size: 2.1em;
+    .subtitle{
+      font-size: 0.5em;
+    }
   }
+
   .footer{
-    top: 5.5rem;
+    @include flexColumn();
+    row-gap: 1px;
+    position: relative;
+    top: 7.5rem;
+
+    .reachme{
+      font-family: $fancy-font;
+      font-size: 0.8rem;
+      }
+    
+    .icons{
+      display: flex;
+      column-gap: 18px;
+      justify-content: center;
+      .fa-brands{
+        font-size: 1.2rem;
+      }
+      .fa-envelope{
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .about{
+    position: absolute;
+    top: 12vh;
+    width: 90vw;
+    left: 50%;
+    transform: translateX(-50%);
+    @include flexColumn();
+    row-gap: 12px;
+    .img-container{
+      width: 100%;
+      text-align: center;
+      img{
+        height: 100px;
+        width: auto;
+      }
+    }
+    .about-text{
+      text-align: center;
+      padding-left: 0;
+      #about-me{
+        font-size: 0.7rem;
+      }
+    }
+  }
+
+  .navbar{
+    column-gap: 2.7rem;
+    position: fixed;
+    top: 12px;
+    left: 0;
   }
 }
 
-// @media (prefers-color-scheme: light) {
-//   :root {
-//     color: #213547;
-//     background-color: #ffffff;
-//   }
-//   a:hover {
-//     color: #747bff;
-//   }
-//   button {
-//     background-color: #f9f9f9;
-//   }
-// }
+@media screen and (min-width: 501px) and (max-width: 900px){
+  h1 {
+    font-size: 2.7em;
+    .subtitle{
+      font-size: 0.5em;
+    }
+  }
+
+  .footer{
+    @include flexColumn();
+    row-gap: 8px;
+    position: relative;
+    top: 11rem;
+
+    .reachme{
+      font-size: 1rem;
+    }
+    
+    .icons{
+      display: flex;
+      column-gap: 21px;
+      justify-content: center;
+      .fa-brands{
+        font-size: 1.4rem;
+      }
+      .fa-envelope{
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .about{
+    position: absolute;
+    top: 10vh;
+    width: 80vw;
+    left: 50%;
+    transform: translateX(-50%);
+    @include flexColumn();
+    row-gap: 20px;
+    .img-container{
+      width: 100%;
+      text-align: center;
+      img{
+        height: 250px;
+        width: auto;
+      }
+    }
+    .about-text{
+      text-align: center;
+      padding-left: 0;
+      #about-me{
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .navbar{
+    column-gap: 3rem;
+    position: fixed;
+    top: 10px;
+    left: 0;
+  }
+
+}
+
+@media screen and (min-width: 901px) and (max-width: 1300px){
+  h1 {
+    font-size: 3em;
+    .subtitle{
+      font-size: 0.5em;
+    }
+  }
+
+  .footer{
+    @include flexColumn();
+    row-gap: 6px;
+    position: relative;
+    top: 7rem;
+    
+    .icons{
+      display: flex;
+      column-gap: 22px;
+      justify-content: center;
+      .fa-brands{
+        font-size: 1.65rem;
+      }
+      .fa-envelope{
+        font-size: 1.65rem;
+      }
+    }
+  }
+
+  .navbar{
+    position: fixed;
+    top: 10px;
+    left: 0;
+  }
+
+  .about{
+    position: absolute;
+    top: 15vh;
+    width: 80vw;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80vw;
+    display: flex;
+    .img-container{
+      align-content: center;
+      img{
+        height: 320px;
+        width: auto;
+      }
+    }
+    text-align: left;
+    .about-text{
+      align-content: center;
+      padding-left: 20px;
+      #about-me{
+        font-size: 1.05rem;
+      }
+    }
+  }
+}
